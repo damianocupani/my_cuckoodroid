@@ -1,17 +1,44 @@
-![Cuckoo](http://cuckoosandbox.org/graphic/cuckoo.png)
+![Image of cuckoo-droid](https://github.com/idanr1986/cuckoo-droid/blob/master/documentation/book/src/_images/logo/cuckoo.png?raw=true)
 
-In three words, [Cuckoo Sandbox](http://www.cuckoosandbox.org) is a malware analysis system.
+[![Black Hat Arsenal](https://www.toolswatch.org/badges/arsenal/2015.svg)]( https://www.blackhat.com/us-15/arsenal.html)
+[![Black Hat Arsenal](https://www.toolswatch.org/badges/arsenal/2016.svg)]( https://www.blackhat.com/us-16/arsenal.html)
 
-What does that mean? It simply means that you can throw any suspicious file at it and in a matter of seconds Cuckoo will provide you back some detailed results outlining what such file did when executed inside an isolated environment.
+CuckooDroid - Automated Android Malware Analysis.
+=================================================
+Contributed By Check Point Software Technologies LTD.
 
-If you want to contribute to development, please read [this](http://www.cuckoosandbox.org/development.html) and [this](http://www.cuckoofoundation.org/contribute) first. Make sure you check our Issues and Pull Requests and that you join our IRC channel.
+CuckooDroid is an extension of Cuckoo Sandbox the Open Source software for automating analysis of suspicious files, CuckooDroid brigs to cuckoo the capabilities of execution and analysis of android application.
 
-<hr />
+Installation - Easy integration script:
 
-This is a development version, we do not recommend its use in production.
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    git clone --depth=1 https://github.com/cuckoobox/cuckoo.git cuckoo -b 1.2
+    cd cuckoo
+    git remote add droid https://github.com/idanr1986/cuckoo-droid
+    git pull --allow-unrelated-histories --no-edit -s recursive -X theirs droid master 
+    cat conf-extra/processing.conf >> conf/processing.conf
+    cat conf-extra/reporting.conf >> conf/reporting.conf
+    rm -r conf-extra
+    echo "protobuf" >> requirements.txt
 
-You can find a full documentation of the latest stable release [here](http://docs.cuckoosandbox.org).
+Documentation
+=============
+- CuckooDroid - http://cuckoo-droid.readthedocs.org/
+- Cuckoo Sandbox - http://cuckoo.readthedocs.org/
 
-<hr />
+You are advised to read the Cuckoo Sandbox documentation before using CuckooDroid!
 
-[![Build Status](https://travis-ci.org/cuckoobox/cuckoo.png?branch=master)](https://travis-ci.org/cuckoobox/cuckoo)
+Powered by:
+===========
+- Androguard -> https://code.google.com/p/androguard/
+- Google Play Unofficial Python API -> https://github.com/egirault/googleplay-api
+
+Credit 
+======
+- botherder for linux_analyzer_dev -> https://github.com/cuckoobox/cuckoo/tree/linux_analyzer_dev
+
+Authors
+=======
+- Idan Revivo - idanr1986@gmail.com (twitter: idanr86)
+- Ofer Caspi oferc@checkpoint.com (twitter: @shablolForce)
