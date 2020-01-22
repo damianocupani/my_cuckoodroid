@@ -9,3 +9,4 @@ web_android/analysis/__init__.pyc
 .idea/misc.xml
 
 *.pyc
+*~
