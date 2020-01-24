@@ -167,6 +167,7 @@ class Avd(Machinery):
         pcap_dump_path=os.path.join(CUCKOO_ROOT, "storage", "analyses", str(task_id), "dump.pcap")
         cmd = [
             self.options.avd.emulator_path,
+            "-writable-system",
             "@{0}".format(label),
             "-no-snapshot-save",
             "-netspeed",
