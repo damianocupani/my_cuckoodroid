@@ -2,11 +2,13 @@
 .pyc
 .idea/workspace.xml
 
-web_android/analysis/__init__.pyc
+
+db/cuckoo.db
+log/cuckoo.log
 
 *.pyc
 
 .idea/misc.xml
 
-*.pyc
+
 *~
